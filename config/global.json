@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "_default": {
+            "link": "mahaskaemail"
+        }, 
+        "mahaskaemail": {
+            "applicationId": "epYhWHH8QmZVZWCyuLdXk5BEk94WuQwfmvJ7vP2R", 
+            "masterKey": "28AKRgFmjUaH51n4Zzz6csP5yriK6zQAUAPhN1Yo"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.19"
+    }
+}

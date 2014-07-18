@@ -1,0 +1,98 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="scripts/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="scripts/vendor/animate.min.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/css/style.css">
+    <link rel="stylesheet" href="styles/ryan.css">
+    <link rel="stylesheet" href="styles/css/blog.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/css/abhi.css">
+    <link rel="stylesheet" href="styles/css/owl.carousel.css">
+    <link rel="stylesheet" href="styles/css/owl.theme.css">
+
+    <!-- endbuild -->
+  </head>
+  <body ng-app="mahaskaRebrandApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+    <div ng-include="'views/navbar.html'"></div>
+
+    <div ng-view=""></div>
+
+    <div ng-include="'views/footer.html'"></div>
+
+
+    <!--[if lt IE 9]>
+    <script src="scripts/vendor/es5-shim.min.js"></script>
+    <script src="scripts/vendor/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="scripts/vendor/jquery.min.js"></script>
+    <script src="scripts/vendor/angular.min.js"></script>
+    <script src="scripts/vendor/bootstrap.min.js"></script>
+    <script src="scripts/vendor/angular-route.min.js"></script>
+    <script src="scripts/vendor/angular-scroll.min.js"></script>
+    <script src="scripts/vendor/ui-bootstrap-tpls.min.js"></script>
+    <script src="scripts/vendor/ng-infinite-scroll.min.js"></script>
+    <script src="scripts/vendor/angular-sanitize.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/vendor/owl.carousel.min.js"></script>
+
+        <script src="scripts/app.js"></script>
+        <script src="//www.parsecdn.com/js/parse-1.2.15.js"></script>
+        <script src="scripts/services/officersSrvc.js"></script>
+        <script src="scripts/services/parseConstant.js"></script>
+        <script src="scripts/services/parseEmailConstant.js"></script>
+        <script src="scripts/services/partnersService.js"></script>
+        <script src="scripts/services/emailService.js"></script>
+        <script src="scripts/services/galleryService.js"></script>
+        <script src="scripts/services/albumService.js"></script>
+        <script src="scripts/services/productsService.js"></script>
+        <script src="scripts/services/parseService.js"></script>
+        <script src="scripts/services/historyService.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/productCtrl.js"></script>
+        <script src="scripts/controllers/serviceCtrl.js"></script>
+        <script src="scripts/controllers/distributionCtrl.js"></script>
+        <script src="scripts/controllers/aboutCtrl.js"></script>
+        <script src="scripts/controllers/blogsCtrl.js"></script>
+        <script src="scripts/controllers/archiveCtrl.js"></script>
+        <script src="scripts/controllers/bioCtrl.js"></script>
+        <script src="scripts/controllers/historyCtrl.js"></script>
+        <script src="scripts/controllers/mediaCtrl.js"></script>
+        <script src="scripts/controllers/galleryCtrl.js"></script>
+        <script src="scripts/controllers/careersCtrl.js"></script>
+        <script src="scripts/controllers/contactCtrl.js"></script>
+        <script src="scripts/controllers/partnersCtrl.js"></script>
+        <script src="scripts/directives/owlSlider.js"></script>
+        <script src="scripts/directives/scroll.js"></script>
+        <script src="scripts/directives/gallery.js"></script>
+        <script src="scripts/directives/angular-follow.js"></script>
+        <script src="scripts/filters/truncate.js"></script>
+        <!-- endbuild -->
+
+</body>
+</html>
