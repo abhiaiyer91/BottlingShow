@@ -3,7 +3,7 @@
 	<br>
 		<div class="row text-center">
 			<h1 class="text-center">CAREERS</h1>
-			<p class="text-center lead">“Since my first day at Mahaska over 15 years ago, I’ve been a part of a team where the employees are given the chance to help <br>make decisions and share their ideas to help our company grow strong. I am so happy to be a part of a family owned business that truly cares about their employees and strives to make our community a better place. I’ve grown with company during these 15 years, starting as a part-time Weekend Merchandiser and now as the Chief Marketing Officer. I’ve never forgotten what originally brought me to Mahaska, which was the opportunity to be a part of a team composed of happy, hard working people who distribute products that make people smile!”</p>
+			<p class="text-center lead">“Since my first day at Mahaska over 15 years ago, I’ve been a part of a team where the employees are given the chance to help make decisions and share their ideas to help our company grow strong. I am so happy to be a part of a family owned business that truly cares about their employees and strives to make our community a better place. I’ve grown with the company during these 15 years, starting as a part-time Weekend Merchandiser and now as the Chief Marketing Officer. I’ve never forgotten what originally brought me to Mahaska, which was the opportunity to be a part of a team composed of happy, hard working people who distribute products that make people smile!”</p>
 			<p class="text-center lead">- Chad Irving, Chief Marketing Officer</p>
 		</div>
 	</div>
@@ -18,40 +18,40 @@
 		</div>
 		<br>
 		<div class="row">
-			<div class="col-sm-3 text-center benefit-container">
+			<div class="col-md-3 col-sm-6 text-center benefit-container">
 				<div class="benefit">
 					<div>
-					<img class="img-thumbnail" src="/images/careers/401k.png">
-					</div>
 					<br>
-					<p>401k options available for eligible employees after 1 year of service</p><br>
+					<img class="img-thumbnail" src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Careers/401k_zpsbc48c505.png">
+					</div>
+					<br><p>401k options available for eligible employees after 1 year of service</p><br>
 				</div>
+				<br>
 			</div>
-			<div class="col-sm-3 text-center benefit-container">
+			<div class="col-md-3 col-sm-6 text-center benefit-container">
 				<div class="benefit">
 					<div>
-					<img class="img-thumbnail" src="/images/careers/health.png">
+					<img class="img-thumbnail" src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Careers/health_zps050eda0a.png">
 					</div>
-					<br>
-					<p>Health, RX, Dental, Life Insurance, AD&D Insurance and AFLAC options.</p><br>
+					<br><p>Health, RX, Dental, Life Insurance, AD&D Insurance and AFLAC options.</p><br>
 				</div>
+				<br>
 			</div>
-			<div class="col-sm-3 text-center benefit-container">
+			<div class="col-md-3 col-sm-6 text-center benefit-container">
 				<div class="benefit">
 					<div>
-					<img class="img-thumbnail" src="/images/careers/salary.png">
+					<img class="img-thumbnail" src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Careers/salary_zps7762e7b5.png">
 					</div>
-					<br>
-					<p>Employees can purchase up to 5 cases of product a week at a discounted price.</p><br>
+					<br><p>Employees can purchase up to 5 cases of product a week at a discounted price.</p><br>
 				</div>
+				<br>
 			</div>
-			<div class="col-sm-3 text-center benefit-container">
+			<div class="col-md-3 col-sm-6 text-center benefit-container">
 				<div class="benefit">
 					<div>
-					<img class="img-thumbnail" src="/images/careers/vacation.png">
+					<img class="img-thumbnail" src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Careers/vacation_zps6a3959fa.png">
 					</div>
-					<br>
-					<p>Flexible Spending Account (FSA) not subject to payroll taxes</p><br>
+					<br><p>Flexible Spending Account (FSA) not subject to payroll taxes</p><br>
 				</div>
 			</div>
 		</div>
@@ -78,12 +78,11 @@
 				<h2 class="text-center">CURRENT JOB OPENINGS</h2>
 			</div>
 		</div>
-		<br>
 		<div>
-			<div class="row joblist" ng-repeat="job in trabajo | filter:myFilter">
+			<div class="row joblist" ng-repeat="job in trabajo | filter:myFilter | orderBy:'-createdAt'">
 				<div class="col-xs-12">
-					<h2>{{job.attributes.title | uppercase}} ({{job.attributes.city | uppercase}}, {{job.attributes.state}})<br> Job ID: {{job.attributes.job | uppercase}}</h2>
-					<p>{{job.attributes.description}}</p>
+					<h2>{{job.attributes.title | uppercase}} ({{job.attributes.city | uppercase}}, {{job.attributes.state}})<br> <!-- <span class="small blue">JOB ID: {{job.id}}</span> --></h2>
+					<div ng-bind-html="job.attributes.description"></div>
 				</div>
 			</div>
 		</div>
@@ -101,7 +100,7 @@
 					<input type="email" name="Email" ng-model="data.email" value="" required><br>
 					<label for="">Job:<span>*</span></label>
 					<select ng-model="data.job" name="Job">
-						<option ng-repeat="job in trabajo" value="{{job.attributes.job}}">{{job.attributes.job}}</option>
+						<option ng-repeat="job in trabajo" value="{{job.id}}">{{job.attributes.title}}</option>
 					</select><br>
 					<label for="">Cover Letter/ Message:<span>*</span></label>
 					<textarea type="text" name="Message" ng-model="data.message" value="" rows="10" required></textarea><br>
@@ -125,7 +124,7 @@
 						<p>An alert will trigger confirming that the resume was submitted.</p>
 					</div>
 					<div class="text-center">
-						<img src="../images/careers/arrows.png" alt="" class="img-responsive hidden-xs">
+						<img src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Careers/arrows_zps25e29e33.png~original" alt="" class="img-responsive hidden-xs">
 					</div>
 				</div>
 			</div>

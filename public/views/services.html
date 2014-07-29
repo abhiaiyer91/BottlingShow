@@ -14,13 +14,14 @@
 					<div class="spacer"></div>
 					<div class="stickynavwrapper">
 						<ul>
-							<li><a href="#bottling" du-smooth-scroll><div class="wrap"><img src="/images/services/bottling_icon.png" alt="Bottling"></div><p>Bottling</p></a></li>
-							<li><a href="#brand" du-smooth-scroll><div class="wrap"><img src="/images/services/branddev_icon.png" alt="Brand Dev"></div><p>Brand Dev</p></a></li>
-							<li><a href="#distribution" du-smooth-scroll><div class="wrap"><img src="/images/services/distribution_icon.png" alt="Distribution"></div><p>Distribution</p></a></li>
-							<li><a href="#logistics" du-smooth-scroll><div class="wrap"><img src="/images/services/logistics_icon.png" alt="Logistics"></div><p>Logistics</p></a></li>
-							<li><a href="#marketing" du-smooth-scroll><div class="wrap"><img src="/images/services/marketing_icon.png" alt="Marketing"></div><p>Marketing</p></a></li>
-							<li><a href="#media" du-smooth-scroll><div class="wrap"><img src="/images/services/media_icon.png" alt="Media"></div><p>Media</p></a></li>
-							<li><a href="#vending" du-smooth-scroll><div class="wrap"><img src="/images/services/vending_icon.png" alt="Vending"></div><p>Vending</p></a></li>
+							<li ng-repeat="serv in quickScroll">
+								<a href="{{serv.link}}" du-smooth-scroll offset="65">
+									<div class="wrap">
+										<img src="{{serv.img}}">
+									</div>
+									<p>{{serv.title}}</p>
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -28,8 +29,6 @@
 		</div>
 	</div>
 </div>
-
-
 <section id="services-content">
 	<div id="bottling">
 		<div class="visible-xs mobile-scroll"></div>
@@ -42,7 +41,7 @@
 					</div>
 				</div>
 				<div class="col-sm-5 col-sm-offset-1">
-					<img class="img-responsive" src="/images/services/bottling.png">
+					<img class="img-responsive" src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/SERVICES/bottling_zpsb33a0916.png~original">
 				</div>
 			</div>
 		</div>
@@ -52,7 +51,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-5 hidden-xs">
-					<img class="img-responsive" src="/images/services/brand.png">
+					<img class="img-responsive" src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/SERVICES/brand_zpsa77c5dc4.png~original">
 				</div>
 				<div class="col-sm-6 col-sm-offset-1">
 					<div class="text-block">
@@ -61,7 +60,7 @@
 					</div>
 				</div>
 				<div class="col-sm-5 visible-xs">
-					<img class="img-responsive" src="/images/services/brand.png">
+					<img class="img-responsive" src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/SERVICES/brand_zpsa77c5dc4.png~original">
 				</div>
 			</div>
 		</div>
@@ -77,7 +76,7 @@
 					</div>
 				</div>
 				<div class="col-sm-5 col-sm-offset-1">
-					<img class="img-responsive" src="/images/services/distribution.png">
+					<img class="img-responsive" src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/SERVICES/distribution_zps5a57c77e.png~original">
 				</div>
 
 			</div>
@@ -88,7 +87,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-5 hidden-xs">
-					<img class="img-responsive" src="/images/services/logistics.png">
+					<img class="img-responsive" src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/SERVICES/logistics_zps56f7fbf7.png~original">
 				</div>
 				<div class="col-sm-6 col-sm-offset-1">
 					<div class="text-block">
@@ -97,7 +96,7 @@
 					</div>
 				</div>
 				<div class="col-sm-5 visible-xs">
-					<img class="img-responsive" src="/images/services/logistics.png">
+					<img class="img-responsive" src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/SERVICES/logistics_zps56f7fbf7.png~original">
 				</div>
 			</div>
 		</div>
@@ -109,11 +108,11 @@
 				<div class="col-sm-6">
 					<div class="text-block">
 						<h1>MARKETING</h1>
-						<p>Regional & local marketing services for Mahaska proprietary, partner, and independent brands encompassing a wide breadth of corporate & /chain store level (including national/regional) account calls & in-store marketing all the way down to grassroots local efforts & event activations.</p>
+						<p>Regional & local marketing services for Mahaska proprietary, partner, and independent brands encompassing a wide breadth of corporate & chain store level (including national/regional) account calls & in-store marketing all the way down to grassroots local efforts & event activations.</p>
 					</div>
 				</div>
 				<div class="col-sm-5 col-sm-offset-1">
-					<img class="img-responsive" src="/images/services/marketing.png">
+					<img class="img-responsive" src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/SERVICES/marketing_zps97d518de.png~original">
 				</div>
 			</div>
 		</div>
@@ -123,16 +122,16 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-5 hidden-xs">
-					<img class="img-responsive" src="/images/services/media.png">
+					<img class="img-responsive" src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/SERVICES/media_zpse835d596.png~original">
 				</div>
 				<div class="col-sm-6 col-sm-offset-1">
 					<div class="text-block">
 						<h1>MEDIA</h1>
-						<p>CBS affiliate terrestrial AM/FM radio operator KBOE Hot Country Radio.</p>
+						<p>ABC & CBS affiliate terrestrial AM/FM radio operator KBOE Hot Country & Sports Radio.</p>
 					</div>
 				</div>
 				<div class="col-sm-5 visible-xs">
-					<img class="img-responsive" src="/images/services/media.png">
+					<img class="img-responsive" src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/SERVICES/media_zpse835d596.png~original">
 				</div>
 			</div>
 		</div>
@@ -148,7 +147,7 @@
 					</div>
 				</div>
 				<div class="col-sm-5 col-sm-offset-1">
-					<img class="img-responsive" src="/images/services/vending.png">
+					<img class="img-responsive" src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/SERVICES/vending_zpsb01dcc7d.png~original">
 				</div>
 			</div>
 		</div>

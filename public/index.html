@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Mahaska</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -26,16 +26,20 @@
 
     <!-- endbuild -->
   </head>
-  <body ng-app="mahaskaRebrandApp">
+  <body ng-app="mahaskaRebrandApp" ng-class="{uploading: upLoading}">
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
+
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
 
+    <!-- Add your site or application content here -->
     <div ng-include="'views/navbar.html'"></div>
 
-    <div ng-view=""></div>
+    <div ng-cloak ng-view=""></div>
 
     <div ng-include="'views/footer.html'"></div>
 
@@ -48,7 +52,9 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="scripts/vendor/jquery.min.js"></script>
+    <script src="scripts/vendor/es5-shim/es5-shim.min.js"></script>
     <script src="scripts/vendor/angular.min.js"></script>
+    <script src="scripts/vendor/son3.min.js"></script>
     <script src="scripts/vendor/bootstrap.min.js"></script>
     <script src="scripts/vendor/angular-route.min.js"></script>
     <script src="scripts/vendor/angular-scroll.min.js"></script>
@@ -73,6 +79,7 @@
         <script src="scripts/services/productsService.js"></script>
         <script src="scripts/services/parseService.js"></script>
         <script src="scripts/services/historyService.js"></script>
+        <script src="scripts/services/errorService.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/productCtrl.js"></script>
         <script src="scripts/controllers/serviceCtrl.js"></script>
@@ -88,11 +95,15 @@
         <script src="scripts/controllers/contactCtrl.js"></script>
         <script src="scripts/controllers/partnersCtrl.js"></script>
         <script src="scripts/directives/owlSlider.js"></script>
-        <script src="scripts/directives/scroll.js"></script>
         <script src="scripts/directives/gallery.js"></script>
         <script src="scripts/directives/angular-follow.js"></script>
         <script src="scripts/filters/truncate.js"></script>
+        <!-- ANALYTICS -->
+        <script src="scripts/vendor/angularitics.js"></script>
+        <script src="scripts/vendor/angularitics-ga.js"></script>
+
         <!-- endbuild -->
+
 
 </body>
 </html>

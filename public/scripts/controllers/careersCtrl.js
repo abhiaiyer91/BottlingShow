@@ -1,7 +1,7 @@
 'use strict';
 
 window.app.factory('jobsCities', function (Parse) {
-	
+
 	return function (jobs) {
 		var cities = ['ALL'];
 		jobs.forEach(function (job) {
@@ -47,6 +47,7 @@ window.app.controller('careersCtrl', ['$scope', 'jobsCities', 'Parse', function 
 	Parse.upload();
 
 	function successHandler(response){
+			console.log('success');
 	    $scope.trabajo = response;
 	    $scope.cities = jobsCities(response);
 	    $scope.$apply();

@@ -3,9 +3,9 @@
 
 window.app = angular
   .module('mahaskaRebrandApp', [
-    'ngRoute', 'duScroll', 'ui.bootstrap', 'angular-follow', 'infinite-scroll', 'ngSanitize'
+    'ngRoute', 'duScroll', 'ui.bootstrap', 'angular-follow', 'infinite-scroll', 'ngSanitize', 'angulartics', 'angulartics.google.analytics'
   ]);
-window.app.config(['$routeProvider', function ($routeProvider) {
+window.app.config(['$routeProvider', '$locationProvider', function ($routeProvider,$locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -86,6 +86,7 @@ window.app.config(['$routeProvider', function ($routeProvider) {
       });
   }]);
   window.app.run(['$rootScope', function($rootScope){
+
     $rootScope.$on('$routeChangeSuccess', function(current,next){
         window.scrollTo(0,0);
 

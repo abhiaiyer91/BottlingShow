@@ -16,13 +16,31 @@
 
 .owl-theme .owl-controls .owl-buttons .owl-prev{
   left: -45px;
-  top: 50px;
+  top: 40%;
 }
 
 .owl-theme .owl-controls .owl-buttons .owl-next{
   right: -45px;
-  top: 50px;
+  top: 40%;
 }
+
+@media (max-width: 900px) and (min-width: 601px){
+	.owl-theme .owl-controls .owl-buttons .owl-prev {
+		left: 0px;
+	}
+	.owl-theme .owl-controls .owl-buttons .owl-next {
+	 	right: 0px;
+	}
+}
+@media (max-width: 600px) {
+	.owl-theme .owl-controls .owl-buttons .owl-prev {
+		left: 5px;
+	}
+	.owl-theme .owl-controls .owl-buttons .owl-next {
+	 	right: 5px;
+	}
+}
+
 .owl-theme .owl-controls .owl-buttons div{
 	display: inline-block;
 	zoom: 1;

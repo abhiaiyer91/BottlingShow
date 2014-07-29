@@ -91,6 +91,9 @@ a:hover {
 }
 /* NAVBAR
 -------------------------------------------------- */
+a:visited, a:hover {
+  outline:none
+}
 .navbar-default {
   background: #ee2629;
   border-bottom: none;
@@ -101,10 +104,19 @@ a:hover {
 }
 .navbar-default .navbar-nav li a {
   color: #FFF;
+  font-size:14.5px;
   font-weight: bold;
 }
 .navbar-default .navbar-nav li a:hover {
   color: #FFF;
+}
+.navbar-default .navbar-nav li a:visited {
+  color: #FFF;
+  outline: none;
+}
+.navbar-default .navbar-nav li a:focus {
+  color: #FFF;
+  outline: none;
 }
 @media (max-width: 1200px) {
   .navbar-default .navbar-nav li a {
@@ -120,7 +132,7 @@ a:hover {
   color: #FFF;
 }
 .navbar-default .navbar-nav a:hover {
-  font-size: 18px;
+  font-size: 16px;
 }
 @media (max-width: 992px) {
   .navbar-header {
@@ -171,14 +183,13 @@ a:hover {
 /* HOME PAGE
 -------------------------------------------------- */
 #hero {
-  background: url('/images/home/hero.jpg') no-repeat center center;
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HOME/Images%20Compressed/hero_zpsc3c40334__1406058280_701677568_zpsb3b90806.jpg~original') no-repeat center center;
   height: 825px;
   position: relative;
   background-size: cover;
 }
 #blurb {
-  background: url('/images/home/parallax.jpg');
-  background-attachment: fixed;
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HOME/parallax_zps3f867387.jpg~original');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -187,26 +198,23 @@ a:hover {
   color: #FFF !important;
 }
 #map {
-  background: url('/images/home/map.jpg') no-repeat center center;
-  background-size: cover;
-  height: 500px;
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HOME/chalkboardL_zps71e2c689.png~original') no-repeat center center;
   color: #FFF;
+  height: auto;
 }
-@media (max-width: 767px) {
-  #map {
-    background: url('/images/home/chalk.jpg') no-repeat center center;
-    height: auto;
-  }
-}
+
 #map h2 {
   color: #FFF;
 }
-#serve {
-  margin-top: 80px;
+.serve {
+  padding-top: 65px;
 }
-@media (max-width: 992px) {
-  #serve {
-    margin-top: 10px;
+.img-center{
+  display:inline;
+}
+@media (max-width: 991px) {
+  #map img {
+    width: 80%;
   }
 }
 hr {
@@ -222,11 +230,12 @@ hr {
   opacity: 1.0;
 }
 #mobile-hero {
-  background-image: url(../images/home/heromobile.jpg);
+  background-image: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HOME/heromobile_zps8e550211.jpg~original');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 380px;
+  margin-top: 65px;
 }
 @media (max-width: 767px) {
   .mobile-spacing {
@@ -238,9 +247,11 @@ hr {
 }
 /* PRODUCTS PAGE
 -------------------------------------------------- */
+@media (min-width:401px) {
+  #product-parallax, #blurb, #distribution-parallax {background-attachment: fixed!important;}
+}
 #product-parallax {
-  background: url('/images/products/cheers.jpg');
-  background-attachment: fixed;
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/ProductsPage/Images%20Compressed/cheers_zps3d812406__1406065736_701677568_zpsa37761f3.jpg~original');
   background-repeat: no-repeat;
   height: 300px;
 }
@@ -252,7 +263,7 @@ hr {
   padding-top: 90px;
 }
 .beverages {
-  background: url('/images/products/beverages.jpg') no-repeat center center;
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/ProductsPage/beverages_pic_zps660beeb2.jpg~original') no-repeat center center;
   height: 444px;
   position: relative;
 }
@@ -279,7 +290,7 @@ hr {
   }
 }
 .snacks {
-  background: url('/images/products/snacks.jpg') no-repeat center center;
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/ProductsPage/snacks_zps8b654fbc.jpg~original') no-repeat center center;
   height: 444px;
   position: relative;
 }
@@ -322,6 +333,7 @@ hr {
   font-size: 22px;
 }
 .detail {
+  font-family: 'sans-serif';
   font-size: 11px;
 }
 .detail-list {
@@ -333,22 +345,20 @@ hr {
 .width150 {
   width: 150px;
 }
+
 /* SERVICES PAGE
 -------------------------------------------------- */
 #service-banner {
-  background: url('/images/services/header.jpg');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/SERVICES/Image%20Compressed/header-mid_zps87f8e062__1406065950_701677568_zps0dc3ab16.jpg~original');
   background-attachment: fixed;
   background-repeat: no-repeat;
-  height: 400px;
+  height: 520px;
   background-position-y: -500px;
   position: relative;
   background-size: cover;
 }
-/*@media (max-width: 1600px) and (min-width: 1200px) {
-  #service-banner {
-    background-position-y: -300px;
-  }
-}
+
+/*
 @media (max-width: 1200px) and (min-width: 992px) {
   #service-banner {
     background-position-y: -100px;
@@ -372,13 +382,14 @@ hr {
 }*/
 @media (max-width: 1400px) and (min-width: 767px) {
   #service-banner {
-    background: url('/images/services/header-mid.jpg') no-repeat center center;
+    background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/SERVICES/header-mid_zps87f8e062.jpg~original') no-repeat center center;
     background-size: cover;
+    padding-top:525px;
   }
 }
 @media (max-width: 767px) {
   #service-banner {
-    background: url('/images/services/header-mobile.jpg') no-repeat center center;
+    background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/SERVICES/header-mobile_zps6b538141.jpg~original') no-repeat center center;
     background-size: cover;
   }
 }
@@ -408,7 +419,7 @@ hr {
 }
 #subnav .navwrap .navlist ul {
   overflow: hidden;
-  width: 1100px;
+  width: 100%;
   margin: 0 auto;
 }
 @media all and (max-width: 1100px) {
@@ -602,7 +613,7 @@ hr {
 /* DISTRIBUTION PAGE
 -------------------------------------------------- */
 #distribution-banner {
-  background: url('/images/distribution/header.jpg');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Distribution/Images%20Compressed/header_zps1fc1a351__1406066143_701677568_zpsd3c3a728.jpg~original');
   background-attachment: fixed;
   background-repeat: no-repeat;
   height: 400px;
@@ -643,24 +654,25 @@ hr {
   left: 35%;
   font-size: 70px;
 }
-@media (max-width: 992px) {
-  #distribution-banner h1 {
-    left: 25%;
-  }
-}
-@media (max-width: 580px) {
+@media (max-width: 992px) and (min-width: 461px) {
   #distribution-banner h1 {
     left: 25%;
   }
 }
 @media (max-width: 460px) {
   #distribution-banner h1 {
-    left: 0%;
-    font-size: 50px;
+    font-size: 40px;
+    left: 15%;
+  }
+}
+@media (max-width: 327px) {
+  #distribution-banner h1 {
+    font-size: 40px;
+    left: 8%;
   }
 }
 #distribution-map {
-  background: url('/images/distribution/map.jpg') no-repeat center center;
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HOME/chalkboardL_zps71e2c689.png~original') no-repeat center center;
   height: 660px;
   background-size: cover;
 }
@@ -674,8 +686,7 @@ hr {
   font-size: 22px;
 }
 #distribution-parallax {
-  background: url('/images/distribution/parallax.jpg');
-  background-attachment: fixed;
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Distribution/parallax_zps2434894e.jpg~original');
   background-repeat: no-repeat;
   height: 250px;
 }
@@ -687,8 +698,7 @@ hr {
 #distribution-parallax p {
   color: #FFF;
 }
-#distribution-contact h2 {
-  text-transform: uppercase;
+#distribution-contact p {
   font-size: 22px;
   margin: 20px 0px;
 }
@@ -711,17 +721,17 @@ hr {
   margin: 20px 0px;
 }
 #distribution-contact a {
-  color: black;
+  color: #ee2629;
   text-decoration: underline;
 }
 #distribution-contact a:hover {
-  color: #ee2629;
+  color: #333;
   text-decoration: none;
 }
 /* PARTNERS PAGE
 -------------------------------------------------- */
 #partners-banner {
-  background-image: url(http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/partners_header_zps3a5c294b.jpg~original);
+  background-image: url(http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Partner%20Logos/Images%20Compressed/partners_header_zps3a5c294b__1406066341_701677568_zpsf4bd04e6.jpg~original);
   background-attachment: fixed;
   background-repeat: no-repeat;
   position: relative;
@@ -768,7 +778,7 @@ hr {
 /* ABOUT PAGE
 -------------------------------------------------- */
 #about-banner {
-  background: url('/images/about/header.jpg');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/About/Images%20Compressed/header_zpsc77f30f9__1406066481_701677568_zps947254cc.jpg~original');
   background-attachment: fixed;
   background-repeat: no-repeat;
   height: 400px;
@@ -803,6 +813,13 @@ hr {
     background-position-y: 0px;
   }
 }
+@media (max-width: 327px) {
+  #about-banner h1 {
+    color: #FFF;
+    font-size: 50px !important;
+  }
+}
+
 #about-banner h1 {
   color: #FFF;
   font-size: 70px;
@@ -822,6 +839,7 @@ hr {
 }
 #locations ul li {
   font-family: 'brandon_grotesque_regularRg';
+  font-size:15px;
 }
 .spec-bio {
   margin-bottom: 40px;
@@ -870,7 +888,7 @@ hr {
 /* HISTORY PAGE
 -------------------------------------------------- */
 #history-banner {
-  background: url('/images/history/header.jpg');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/header_compress_zpsad095b3e.jpg~original');
   background-attachment: fixed;
   background-repeat: no-repeat;
   height: 400px;
@@ -927,6 +945,12 @@ hr {
     font-size: 50px;
   }
 }
+@media (max-width: 327px) {
+  #history-banner h1 {
+    left: 14%;
+    font-size: 50px;
+  }
+}
 #history-content {
   background: url('/images/history/background.jpg');
 }
@@ -950,7 +974,7 @@ hr {
   }
 }
 #history-content .first p {
-  background: url('/images/history/1889.png') no-repeat center;
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/1889_zpsdd942e06.png~original') no-repeat center;
   background-size: contain;
 }
 #history-content .second {
@@ -974,7 +998,7 @@ hr {
   }
 }
 #history-content .second p {
-  background: url('/images/history/1916.png') no-repeat center;
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/1916_zps22b7d3ef.png~original') no-repeat center;
   background-size: contain;
 }
 #history-content .third {
@@ -998,7 +1022,7 @@ hr {
   }
 }
 #history-content .third p {
-  background: url('/images/history/1922.png') no-repeat center;
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/1922_zps295905df.png~original') no-repeat center;
   background-size: contain;
 }
 #history-content .fourth {
@@ -1022,7 +1046,7 @@ hr {
   }
 }
 #history-content .fourth p {
-  background: url('/images/history/1947.png') no-repeat center;
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/1947_zps6906f2b6.png~original') no-repeat center;
   background-size: contain;
 }
 #history-content .fifth {
@@ -1046,7 +1070,7 @@ hr {
   }
 }
 #history-content .fifth p {
-  background: url('/images/history/1961.png') no-repeat center;
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/1961_zpsce6c2897.png~original') no-repeat center;
   background-size: contain;
 }
 #history-content .sixth {
@@ -1075,7 +1099,7 @@ hr {
   }
 }
 #history-content .sixth p {
-  background: url('/images/history/1975.png') no-repeat center;
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/1975_zpsee6e5b43.png~original') no-repeat center;
   background-size: contain;
 }
 #history-content .seventh {
@@ -1099,7 +1123,7 @@ hr {
   }
 }
 #history-content .seventh p {
-  background: url('/images/history/1988.png') no-repeat center;
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/1988_zpsfda4543d.png~original') no-repeat center;
   background-size: contain;
 }
 #history-content .eigth {
@@ -1123,7 +1147,7 @@ hr {
   }
 }
 #history-content .eigth p {
-  background: url('/images/history/1993.png') no-repeat center;
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/1993_zpsf341e5e6.png~original') no-repeat center;
   background-size: contain;
 }
 #history-content .ninth {
@@ -1189,34 +1213,34 @@ hr {
   color: #242422;
 }
 .year1889 {
-  background: url('/images/history/1889.png');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/1889_zpsdd942e06.png~original');
 }
 .year1916 {
-  background: url('/images/history/1916.png');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/1916_zps22b7d3ef.png~original');
 }
 .year1922 {
-  background: url('/images/history/1922.png');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/1922_zps295905df.png~original');
 }
 .year1947 {
-  background: url('/images/history/1947.png');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/1947_zps6906f2b6.png~original');
 }
 .year1961 {
-  background: url('/images/history/1961.png');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/1961_zpsce6c2897.png~original');
 }
 .year1975 {
-  background: url('/images/history/1975.png');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/1975_zpsee6e5b43.png~original');
 }
 .year1988 {
-  background: url('/images/history/1988.png');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/1988_zpsfda4543d.png~original');
 }
 .year1993 {
-  background: url('/images/history/1993.png');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/1993_zpsf341e5e6.png~original');
 }
 .year2013 {
-  background: url('/images/history/2013.png');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/2013_zps86e0e647.png~original');
 }
 .today {
-  background: url('/images/history/now.png');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/now_zps9405f327.png~original');
 }
 .dateBkg {
   background-repeat: no-repeat;
@@ -1268,7 +1292,7 @@ hr {
 /* MEDIA PAGE
 -------------------------------------------------- */
 #media-banner {
-  background: url('/images/media/header.jpg');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Media%20album%20tiles/header_zps057c61b7.jpg~original');
   background-attachment: fixed;
   background-repeat: no-repeat;
   height: 400px;
@@ -1380,10 +1404,10 @@ hr {
 /* BEVERAGE PAGE
 -------------------------------------------------- */
 .bev-img {
-  background: url('/images/products/beverages_header.jpg');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/ProductsPage/Images%20Compressed/beverages_header_zpsefcbe73d__1406059267_701677568_zpsc8d5c82a.jpg~original');
 }
 .snack-img {
-  background: url(http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Snacks%20-%20other/3weIwMNDfn8eYxi1MfFUGhUxlOKo1UyH_OVY53eeNZ0_zps50a56cc2.jpg);
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/ProductsPage/Images%20Compressed/snacks_header_zps249a1dd7__1406059515_701677568_zpsb268f2d3.jpg~original');
 }
 #bev-banner {
   background-attachment: fixed;
@@ -1411,7 +1435,7 @@ hr {
   padding-right: 10px;
   padding-left: 10px;
   color: #242422;
-  font-size: 14px;
+  font-size: 15px;
 }
 #bevnav ul li:last-child p {
   margin: 0px;
@@ -1457,7 +1481,7 @@ hr {
   position: absolute;
 }
 #careers-banner {
-  background: url('/images/careers/header.jpg');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Careers/careers_compress_zps1f971d20.jpg~original');
   background-attachment: fixed;
   background-repeat: no-repeat;
   position: relative;
@@ -1519,7 +1543,7 @@ hr {
   color: #ee2629;
 }
 #apply .contact-btn {
-  width: 30%;
+  width: 40%;
   height: auto!important;
   font-size: 25px;
   padding-top: 10px;
@@ -1548,7 +1572,7 @@ textarea {
 /* CONTACT PAGE
 -------------------------------------------------- */
 #contact-banner {
-  background: url('/images/contact/header.jpg');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Contact/contact_compress_zpsedb30607.jpg~original');
   background-attachment: fixed;
   background-repeat: no-repeat;
   height: 400px;
@@ -1606,7 +1630,7 @@ textarea {
   }
 }
 .btn-upload {
-  width: 30%;
+  width: 40%;
   height: auto!important;
   font-size: 25px;
   padding-top: 10px;
@@ -1687,12 +1711,12 @@ textarea {
 }
 .footer-nav li a {
   color: #d3d3d3;
-  font-size: 18px;
+  font-size: 15px;
   font-family: brandon_grotesque_regularRg !important;
 }
 .footer-nav li a:hover {
   color: red;
-  font-size: 20px;
+  font-size: 18px;
 }
 .footer-text {
   font-size: 13px;
@@ -1714,13 +1738,6 @@ ul.footer-social li {
   display: inline;
 }
 /* Mobile */
-#mobile-hero {
-  background-image: url(../images/home/heromobile.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 380px;
-}
 @media (max-width: 767px) {
   .mobile-spacing {
     padding-bottom: 10px;
@@ -1736,4 +1753,12 @@ ul.footer-social li {
 .position-arrows-left {
   position: absolute;
   rigth: 50%;
+}
+@media (min-width: 992px) {
+.benefit p {height: 70px;}
+}
+.blue {color: #00b3bd!important;}
+
+.margtop{
+  margin-top: 30px;
 }

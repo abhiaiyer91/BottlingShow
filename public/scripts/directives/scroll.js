@@ -14,6 +14,16 @@ window.app.directive("scroll", ['$window', '$rootScope', '$route', function ($wi
           scope.$apply();
       }
 
+      $rootScope.$on('$routeChangeStart', function(event,current){
+          if($route.current.controller === 'MainCtrl'){
+            element.removeClass('bg-red');
+            angular.element($window).bind("scroll", scrollHandler);
+          } else {
+            angular.element($window).unbind("scroll", scrollHandler);
+            element.addClass('bg-red');
+          }
+      });
+
       $rootScope.$on('$routeChangeSuccess', function(event,current){
           if($route.current.controller === 'MainCtrl'){
             element.removeClass('bg-red');
@@ -22,7 +32,7 @@ window.app.directive("scroll", ['$window', '$rootScope', '$route', function ($wi
             angular.element($window).unbind("scroll", scrollHandler);
             element.addClass('bg-red');
           }
-      })
+      });
 
 
   };

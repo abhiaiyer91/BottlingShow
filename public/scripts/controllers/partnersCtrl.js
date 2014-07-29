@@ -45,7 +45,9 @@ window.app.factory('fullPartner', [function () {
 		{"PhotobucketUrl":"http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Partner%20Logos/Athlete/tollakson_zpsd440c43b.png~original","PartnerType":"Sponsored Athletes","Name":"TJ Tollakson","link":"http://tollakson.com/"},
 		{"PhotobucketUrl":"http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Partner%20Logos/Athlete/lobue_zps34af6611.png~original","PartnerType":"Sponsored Athletes","Name":"Steven LoBue","link":"https://twitter.com/divelobue"},
 		// Media
-		{"PhotobucketUrl":"","PartnerType":"Media Partners","Name":"CBS for KBOE","link":"http://www.kboeradio.com/"}];
+		{"PhotobucketUrl":"http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Partner%20Logos/ABC_zpsdffedadc.png~original","PartnerType":"Media Partners","Name":"ABC","link":"http://www.abc.com/"},
+		{"PhotobucketUrl":"http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Partner%20Logos/CBS2_zpsab8a24e7.png~original","PartnerType":"Media Partners","Name":"CBS","link":"http://www.cbs.com/"},
+		{"PhotobucketUrl":"http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/Partner%20Logos/kboe_zps2fe9265e.png~original","PartnerType":"Media Partners","Name":"CBS for KBOE","link":"http://www.kboeradio.com/"}];
 
 	return function () {
 		return partners;
@@ -66,12 +68,12 @@ window.app.factory('partnerSplit', ['fullPartner', function (fullPartner) {
 	};
 }]);
 
-window.app.controller('partnerCtrl', ['$scope', 'partnerSplit',  function ($scope, partnerSplit) {
+window.app.controller('partnerCtrl', ['$scope', '$filter','partnerSplit',  function ($scope, $filter, partnerSplit) {
 	$scope.full = partnerSplit();
 	$scope.partners = $scope.full["Brand"];
 	$scope.active = 'Brand';
 	$scope.show = function (type) {
-		$scope.partners = $scope.full[type];
+		$scope.partners = $filter('orderBy')($scope.full[type], 'Name');
 		$scope.active = type;
 	};
 }]);

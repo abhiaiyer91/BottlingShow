@@ -19,7 +19,9 @@
 						<img src="{{officer.img}}" class="img-responsive">
 						<h3>{{name(officer.link)}}, {{officer.title}}</h3>
 					</a>
-					<p>{{officer.content[0] | truncate: 300}}
+					<p ng-if="officer.title === 'Chief Executive Officer (CEO)'">{{officer.content[0] | truncate: 250}}
+					</p>
+					<p ng-if="officer.title != 'Chief Executive Officer (CEO)'">{{officer.content[0] | truncate: 250}}
 					</p>
 					<a href="/#/about/{{officer.link}}" class="btn btn-primary btn-about">READ MORE</a>
 				</div>
@@ -46,7 +48,7 @@
 			</div>
 			<div class="col-sm-6">
 				<h2>OUR SOCIAL MEDIA</h2>
-				<p>We're social and we'd love to hear from you! Feel free to send us an email, find us on Google Plus, follow on Twitter and join us on Facebok.</p>
+				<p>We're social and we'd love to hear from you! Feel free to send us an email, join us on Facebook, follow on Twitter and find us on Instagram.</p>
 				<ul class="social">
 					<li>
 						<a href="http://www.facebook.com/mahaskabottling" target="_blank">

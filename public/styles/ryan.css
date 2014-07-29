@@ -1,15 +1,23 @@
 
-/* HOMEPAGE */
-#mobile-hero {
-  background-image: url(../images/home/heromobile.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 380px;
-}
-
 @media(max-width: 767px) {
   .mobile-spacing {padding-bottom: 10px;}
 }
 
 #blurb { height:auto!important; }
+
+.uploading {
+	position: relative;
+	heigth: 100%;
+	overflow: hidden;
+}
+.uploading:before {
+	position: absolute;
+	content:"";
+	left:0;
+	bottom:0;
+	right:0;
+	top:0;
+	z-index:1000;
+	background:rgba(0,0,0,0.7) center;
+	background-image: url('../loading.gif');
+}
