@@ -24,7 +24,7 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  background: url('/images/background.jpg');
+  background: url('/images/background.jpg') fixed;
 }
 #footer {
   width: 100%;
@@ -79,13 +79,16 @@ a:hover {
   background-color: transparent;
   border: none;
 }
+
+.turq{
+  color: #00b4bb;
+}
+
 #partners-banner,
-#service-banner,
 #distribution-banner,
 #about-banner,
 #history-banner,
-#media-banner,
-#contact-banner {
+#media-banner {
   /*  height: auto!important;*/
   background-position: center!important;
 }
@@ -99,8 +102,8 @@ a:visited, a:hover {
   border-bottom: none;
 }
 .navbar-default .navbar-nav {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 22px;
+  padding-bottom: 0px;
 }
 .navbar-default .navbar-nav li a {
   color: #FFF;
@@ -188,6 +191,19 @@ a:visited, a:hover {
   position: relative;
   background-size: cover;
 }
+@media (max-width:950px) and (min-width:510px){
+  #hero {
+    height:491px;
+  }
+}
+@media (max-width:509px){
+  #hero {
+    background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HOME/heromobile_zps8e550211.jpg~original') no-repeat center center;
+    background-size: 100%;
+    height: 400px;
+  }
+}
+
 #blurb {
   background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HOME/parallax_zps3f867387.jpg~original');
   background-repeat: no-repeat;
@@ -237,6 +253,13 @@ hr {
   height: 380px;
   margin-top: 65px;
 }
+
+@media(max-width: 400px){
+  #mobile-hero {
+    background-size: 100%;
+    margin-top:0px;
+  }
+}
 @media (max-width: 767px) {
   .mobile-spacing {
     padding-bottom: 10px;
@@ -251,8 +274,10 @@ hr {
   #product-parallax, #blurb, #distribution-parallax {background-attachment: fixed!important;}
 }
 #product-parallax {
-  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/ProductsPage/Images%20Compressed/cheers_zps3d812406__1406065736_701677568_zpsa37761f3.jpg~original');
+  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/ProductsPage/products_parallax_zps75d726db.jpg~original') center;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -20px;
   height: 300px;
 }
 #product-parallax p {
@@ -264,47 +289,29 @@ hr {
 }
 .beverages {
   background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/ProductsPage/beverages_pic_zps660beeb2.jpg~original') no-repeat center center;
-  height: 444px;
   position: relative;
 }
 .beverages h1 {
-  position: absolute;
-  top: 40%;
-  left: 15%;
   color: #FFF;
   font-size: 70px;
-}
-@media (max-width: 1200px) {
-  .beverages h1 {
-    left: 5%;
-  }
+  padding: 150px 0;
 }
 @media (max-width: 992px) {
   .beverages h1 {
     font-size: 50px;
   }
-}
-@media (max-width: 992px) {
   .beverages {
     margin-bottom: 10px;
   }
 }
 .snacks {
   background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/ProductsPage/snacks_zps8b654fbc.jpg~original') no-repeat center center;
-  height: 444px;
   position: relative;
 }
 .snacks h1 {
-  position: absolute;
-  top: 40%;
-  left: 25%;
+  padding: 150px 0;
   color: #FFF;
   font-size: 70px;
-}
-@media (max-width: 1200px) {
-  .snacks h1 {
-    left: 5%;
-  }
 }
 @media (max-width: 992px) {
   .snacks h1 {
@@ -349,42 +356,54 @@ hr {
 /* SERVICES PAGE
 -------------------------------------------------- */
 #service-banner {
-  background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/SERVICES/Image%20Compressed/header-mid_zps87f8e062__1406065950_701677568_zps0dc3ab16.jpg~original');
   background-attachment: fixed;
   background-repeat: no-repeat;
-  height: 520px;
-  background-position-y: -500px;
+  height: 480px;
   position: relative;
   background-size: cover;
 }
-
-/*
-@media (max-width: 1200px) and (min-width: 992px) {
+@media (min-width: 1170px) {
   #service-banner {
-    background-position-y: -100px;
+    background-position-y: -100px!important;
+  }
+}
+@media (max-width:1170px) and (min-width: 1070px) {
+  #service-banner {
+    background-position-y: -70px!important;
+  }
+}
+@media (max-width: 580px) {
+  #service-banner {
+    height: 300px;
+  }
+}
+
+
+/*@media (min-width: 992px) {
+  #service-banner {
+    background-position-y: -100px!important;
   }
 }
 @media (max-width: 992px) {
   #service-banner {
-    background-position-y: -75px;
+    background-position-y: -75px!important;
   }
 }
 @media (max-width: 645px) {
   #service-banner {
-    background-position-y: -20px;
+    background-position-y: -20px!important;
     height: 300px;
   }
 }
 @media (max-width: 460px) {
   #service-banner {
-    background-position-y: 0px;
+    background-position-y: 0px!important;
   }
 }*/
-@media (max-width: 1400px) and (min-width: 767px) {
+@media (min-width: 767px) {
   #service-banner {
     background: url('http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/SERVICES/header-mid_zps87f8e062.jpg~original') no-repeat center center;
     background-size: cover;
-    padding-top:525px;
   }
 }
 @media (max-width: 767px) {
@@ -606,9 +625,6 @@ hr {
 }
 #services-partners {
   background: #FFF;
-}
-.mobile-scroll {
-  padding: 30px;
 }
 /* DISTRIBUTION PAGE
 -------------------------------------------------- */
@@ -942,6 +958,7 @@ hr {
 @media (max-width: 460px) {
   #history-banner h1 {
     left: 0%;
+    right: 0%;
     font-size: 50px;
   }
 }
@@ -1203,8 +1220,11 @@ hr {
   background: url('/images/history/now.png') no-repeat center;
   background-size: contain;
 }
+@media (max-width:1200px) and (min-width: 767px) {
+  #history-blocks { padding-top: 15px; }
+}
 #hist-blurb p {
-  font-size: 28px;
+  font-size: 24px;
 }
 #bottom-blurb h3 {
   font-size: 28px;
@@ -1580,6 +1600,9 @@ textarea {
   position: relative;
   background-size: cover;
 }
+#contact-banner{
+  background-position: right !important;
+}
 @media (max-width: 1600px) and (min-width: 1200px) {
   #contact-banner {
     background-position-y: -300px;
@@ -1597,15 +1620,16 @@ textarea {
 }
 @media (max-width: 645px) {
   #contact-banner {
-    background-position-y: -20px;
+    background-position: left !important;
     height: 300px;
   }
 }
 @media (max-width: 460px) {
   #contact-banner {
-    background-position-y: 0px;
+    background-position: left !important;
   }
 }
+
 #contact-banner h1 {
   position: absolute;
   color: #FFF;
@@ -1615,17 +1639,26 @@ textarea {
 }
 @media (max-width: 992px) {
   #contact-banner h1 {
-    left: 25%;
+    left: 20%;
+    right: 20%;
+  }
+}
+@media (max-width: 767px) {
+  #contact-banner h1 {
+    left: 10%;
+    right: 10%;
   }
 }
 @media (max-width: 580px) {
   #contact-banner h1 {
-    left: 25%;
+    left: 10%;
+    right: 10%;
   }
 }
-@media (max-width: 460px) {
+@media (max-width: 547px) {
   #contact-banner h1 {
     left: 0%;
+    right: 0%;
     font-size: 50px;
   }
 }
@@ -1651,6 +1684,7 @@ textarea {
 }
 .yelorange {
   border-top: 4px solid #ffcc00;
+  width: 100%;
 }
 .bg-red {
   background-color: #ee2629 !important;
@@ -1762,3 +1796,27 @@ ul.footer-social li {
 .margtop{
   margin-top: 30px;
 }
+.margtops{
+  margin-top: 50px;
+}
+.margin-btm10 { margin-bottom: 10px; }
+.font21 { font-size: 21px; }
+@media (min-width: 767px) {
+  .width80 { width: 80%; margin-left: 10%; }
+}
+.width60 {width:60%; margin-left:20%;}
+#service-banners {
+  position: relative;
+}
+#service-banners img {
+  height: 100%;
+}
+#service-banners h1 {
+  position: absolute;
+  top: 45%; left: 0; bottom: 45%; right: 0;
+  margin: auto;
+  color: #FFF;
+  font-size: 70px;
+}
+.pad67 {padding-top: 67px;}
+.width100 {width: 100%;}

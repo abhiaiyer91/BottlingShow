@@ -14,9 +14,9 @@
           <li ng-class="{curr: active==='Coffee'}" ng-click="narrow({category: 'Coffee'})"><p>COFFEE</p></li>
           <li ng-class="{curr: active==='Energy Drink'}" ng-click="narrow({category: 'Energy Drink'})"><p>ENERGY</p></li>
           <li ng-class="{curr: active==='Juice'}" ng-click="narrow({category: 'Juice'})"><p>JUICE</p></li>
-          <li ng-class="{curr: active==='Mixer'}" ng-click="narrow({category: 'Mixer'})"><p>MIXER</p></li>
-          <li ng-class="{curr: active==='Protein Drink'}" ng-click="narrow({category: 'Protein Drink'})"><p class="hidden-xs">PROTEIN DRINK</p><p class="visible-xs">PROTEIN</p></li>
-          <li ng-class="{curr: active==='Soda Water'}" ng-click="narrow({category: 'Soda Water'})"><p>SODA WATER</p></li>
+<!--           <li ng-class="{curr: active==='Mixer'}" ng-click="narrow({category: 'Mixer'})"><p>MIXER</p></li> -->
+          <li ng-class="{curr: active==='Protein'}" ng-click="narrow({category: 'Protein'})"><p>PROTEIN</p></li>
+          <li ng-class="{curr: active==='Sparkling'}" ng-click="narrow({category: 'Sparkling'})"><p>SPARKLING</p></li>
           <li ng-class="{curr: active==='Soft Drink'}" ng-click="narrow({category: 'Soft Drink'})"><p>SOFT DRINK</p></li>
           <li ng-class="{curr: active==='Sports Drink'}" ng-click="narrow({category: 'Sports Drink'})"><p>SPORTS</p></li>
           <li ng-class="{curr: active==='Syrup'}" ng-click="narrow({category: 'Syrup'})"><p>SYRUP</p></li>
@@ -28,11 +28,10 @@
           <li ng-class="{curr: active==='Candy'}" ng-click="narrowS({category: 'Candy'})"><p>CANDY</p></li>
           <li ng-class="{curr: active==='Pastries'}" ng-click="narrowS({category: 'Pastries'})"><p>PASTRIES</p></li>
           <li ng-class="{curr: active==='Dairy'}" ng-click="narrowS({category: 'Dairy'})"><p>DAIRY</p></li>
-          <li ng-class="{curr: active==='CEREAL / BREAKFAST'}" ng-click="narrowS({category: 'CEREAL / BREAKFAST'})"><p>CEREAL / BREAKFAST</p></li>
-          <li ng-class="{curr: active==='Sandwiches'}" ng-click="narrowS({category: 'Sandwiches'})"><p>SANDWICHES</p></li>
-          <li ng-class="{curr: active==='PIZZA / BURRITOS / LUNCHABLES'}" ng-click="narrowS({category: 'PIZZA / BURRITOS / LUNCHABLES'})"><p>PIZZA / BURRITOS / LUNCHABLES</p></li>
+          <li ng-class="{curr: active==='BREAKFAST'}" ng-click="narrowS({category: 'BREAKFAST'})"><p>BREAKFAST</p></li>
+          <li ng-class="{curr: active==='Cold Foods'}" ng-click="narrowS({category: 'Cold Foods'})"><p>COLD FOODS</p></li>
           <li ng-class="{curr: active==='COOKIES / CRACKERS / BARS'}" ng-click="narrowS({category: 'COOKIES / CRACKERS / BARS'})"><p>COOKIES / CRACKERS / BARS</p></li>
-          <li ng-class="{curr: active==='Chips'}" ng-click="narrowS({category: 'Chips'})"><p>CHIPS</p></li>
+          <li style="top:5px !important;" ng-class="{curr: active==='Chips'}" ng-click="narrowS({category: 'Chips'})"><p>CHIPS</p></li>
           <li ng-class="{curr: active==='Other'}" ng-click="narrowS({category: 'Other'})"><p>OTHER</p></li>
         </ul>
     </div>
@@ -44,7 +43,7 @@
     <div class ="visible-lg" ng-repeat="bev in beverages | filter:bevFilter" ng-class="{row: (($index+1)%6)===0}">
         <div class="col-lg-2 animated" ng-class="{fadeInRight: equal===true}"ng-if="path==='beverages'" ng-mouseover="show(bev)"  ng-mouseleave="unshow(bev)">
           <div ng-class="{fadeIn: showSlide === true}" class="animated detail-list">
-            <img src="{{bev.src}}" ng-show="prodShow" class="width150" ng-class="{margtop: bev.category[0] === 'Syrup' && bev.brand != 'GLACIER BLAST' && bev.brand != 'SIMPLE SYRUP'}" />
+            <img src="{{bev.src}}" ng-show="prodShow" class="width150" ng-class="{margtop: bev.category[0] === 'Syrup' && bev.brand != 'GLACIER BLAST' && bev.brand != 'SIMPLE SYRUP', margtops: bev.brand === 'NEW ENGLAND COFFEE'}" />
             <div class="info-border" ng-show="showSlide">
             <ul class="detail-list">
               <li class="detail" ng-if="bev.type1 != '' ">{{bev.type1}}</li>
@@ -69,7 +68,7 @@
     <div class ="visible-md" ng-repeat="bev in beverages | filter:bevFilter" ng-class="{row: (($index+1)%4)===0}">
         <div class="col-md-3 animated" ng-class="{fadeInRight: equal===true}" ng-if="path==='beverages'" ng-mouseover="show(bev)"  ng-mouseleave="unshow(bev)">
           <div ng-class="{fadeIn: showSlide === true}" class="animated detail-list">
-            <img src="{{bev.src}}" ng-show="prodShow" class="width150" ng-class="{margtop: bev.category[0] === 'Syrup'}"/>
+            <img src="{{bev.src}}" ng-show="prodShow" class="width150" ng-class="{margtop: bev.category[0] === 'Syrup' && bev.brand != 'GLACIER BLAST' && bev.brand != 'SIMPLE SYRUP', margtops: bev.brand === 'NEW ENGLAND COFFEE'}"/>
             <div class="info-border" ng-show="showSlide">
             <ul class="detail-list">
               <li class="detail" ng-if="bev.type1 != '' ">{{bev.type1}}</li>
@@ -94,7 +93,7 @@
     <div class ="visible-sm" ng-repeat="bev in beverages | filter:bevFilter" ng-class="{row: (($index+1)%3)===0}">
         <div class="col-sm-4 animated" ng-class="{fadeInRight: equal===true}" ng-if="path==='beverages'" ng-mouseover="show(bev)"  ng-mouseleave="unshow(bev)">
           <div ng-class="{fadeIn: showSlide === true}" class="animated detail-list">
-            <img src="{{bev.src}}" ng-show="prodShow" class="width150" ng-class="{margtop: bev.category[0] === 'Syrup'}" />
+            <img src="{{bev.src}}" ng-show="prodShow" class="width150" ng-class="{margtop: bev.category[0] === 'Syrup' && bev.brand != 'GLACIER BLAST' && bev.brand != 'SIMPLE SYRUP', margtops: bev.brand === 'NEW ENGLAND COFFEE'}"/>
             <div class="info-border" ng-show="showSlide">
             <ul class="detail-list">
               <li class="detail" ng-if="bev.type1 != '' ">{{bev.type1}}</li>
@@ -117,9 +116,9 @@
         </div>
     </div>
     <div class ="visible-xs" ng-repeat="bev in beverages | filter:bevFilter" ng-class="{row: (($index+1)%2)===0}">
-        <div class="col-xs-6 animated" ng-class="{fadeInRight: equal===true}" ng-if="path==='beverages'" ng-mouseover="show(bev)"  ng-mouseleave="unshow(bev)">
+        <div class="col-xs-6" ng-class="{fadeInRight: equal===true}" ng-if="path==='beverages'" ng-mouseover="show(bev)"  ng-mouseleave="unshow(bev)">
           <div ng-class="{fadeIn: showSlide === true}" class="animated detail-list">
-            <img src="{{bev.src}}" ng-show="prodShow" class="width150" ng-class="{margtop: bev.category[0] === 'Syrup'}"/>
+            <img src="{{bev.src}}" ng-show="prodShow" class="width150" ng-class="{margtop: bev.category[0] === 'Syrup' && bev.brand != 'GLACIER BLAST' && bev.brand != 'SIMPLE SYRUP', margtops: bev.brand === 'NEW ENGLAND COFFEE'}"/>
             <div class="info-border" ng-show="showSlide">
             <ul class="detail-list">
               <li class="detail" ng-if="bev.type1 != '' ">{{bev.type1}}</li>
@@ -147,15 +146,18 @@
       <div class="visible-lg" ng-repeat="snack in snacks | filter:snackFilter" ng-class="{row: (($index+1)%6)===0}">
         <div class="col-lg-2 animated" ng-class="{fadeInRight: equal===true}" ng-if="path==='snacks'" ng-mouseover="show(snack)"  ng-mouseleave="unshow(snack)">
           <div ng-class="{fadeIn: showSlide === true}" class="animated detail-list">
-            <img src="{{snack['prod']}}" ng-show="prodShow" class="width150" />
+            <img src="{{snack['prod']}}" ng-show="prodShow" class="width150" ng-class="{margtops: snack.Name === 'Progressigs'}"/>
             <div class="info-border" ng-show="showSlide">
             <div class="text-center">
-              <img src="{{snack.manu}}" alt="" class="img-responsive center-image width60">
+              <img src="{{snack.manu}}" alt="" class="img-responsive center-image width80">
             </div>
             <ul class="detail-list">
               <li class="detail" ng-if="snack.type1 != '' ">{{snack.type1}}</li>
               <li class="detail" ng-if="snack.type2 != '' ">{{snack.type2}}</li>
               <li class="detail" ng-if="snack.type3 != '' ">{{snack.type3}}</li>
+              <li class="detail" ng-if="snack.type4 != '' ">{{snack.type4}}</li>
+              <li class="detail" ng-if="snack.type5 != '' ">{{snack.type5}}</li>
+              <li class="detail" ng-if="snack.type6 != '' ">{{snack.type6}}</li>
             </ul>
             </div>
           </div>
@@ -164,15 +166,18 @@
       <div class="visible-md" ng-repeat="snack in snacks | filter:snackFilter" ng-class="{row: (($index+1)%4)===0}">
         <div class="col-md-3 animated" ng-class="{fadeInRight: equal===true}" ng-if="path==='snacks'" ng-mouseover="show(snack)"  ng-mouseleave="unshow(snack)">
           <div ng-class="{fadeIn: showSlide === true}" class="animated detail-list">
-            <img src="{{snack['prod']}}" ng-show="prodShow" class="width150" />
+            <img src="{{snack['prod']}}" ng-show="prodShow" class="width150" ng-class="{margtops: snack.Name === 'Progressigs'}"/>
             <div class="info-border" ng-show="showSlide">
             <div class="text-center">
-              <img src="{{snack.manu}}" alt="" class="img-responsive center-image width60">
+              <img src="{{snack.manu}}" alt="" class="img-responsive center-image width80">
             </div>
             <ul class="detail-list">
               <li class="detail" ng-if="snack.type1 != '' ">{{snack.type1}}</li>
               <li class="detail" ng-if="snack.type2 != '' ">{{snack.type2}}</li>
               <li class="detail" ng-if="snack.type3 != '' ">{{snack.type3}}</li>
+              <li class="detail" ng-if="snack.type4 != '' ">{{snack.type4}}</li>
+              <li class="detail" ng-if="snack.type5 != '' ">{{snack.type5}}</li>
+              <li class="detail" ng-if="snack.type6 != '' ">{{snack.type6}}</li>
             </ul>
             </div>
           </div>
@@ -181,7 +186,27 @@
       <div class="visible-sm" ng-repeat="snack in snacks | filter:snackFilter" ng-class="{row: (($index+1)%3)===0}">
         <div class="col-sm-4 animated hidden-xs" ng-class="{fadeInRight: equal===true}" ng-if="path==='snacks'" ng-mouseover="show(snack)"  ng-mouseleave="unshow(snack)">
           <div ng-class="{fadeIn: showSlide === true}" class="animated detail-list">
-            <img src="{{snack['prod']}}" ng-show="prodShow" class="width150" />
+            <img src="{{snack['prod']}}" ng-show="prodShow" class="width150" ng-class="{margtops: snack.Name === 'Progressigs'}"/>
+            <div class="info-border" ng-show="showSlide">
+            <div class="text-center">
+              <img src="{{snack.manu}}" alt="" class="img-responsive center-image width80">
+            </div>
+            <ul class="detail-list">
+              <li class="detail" ng-if="snack.type1 != '' ">{{snack.type1}}</li>
+              <li class="detail" ng-if="snack.type2 != '' ">{{snack.type2}}</li>
+              <li class="detail" ng-if="snack.type3 != '' ">{{snack.type3}}</li>
+              <li class="detail" ng-if="snack.type4 != '' ">{{snack.type4}}</li>
+              <li class="detail" ng-if="snack.type5 != '' ">{{snack.type5}}</li>
+              <li class="detail" ng-if="snack.type6 != '' ">{{snack.type6}}</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="visible-xs" ng-repeat="snack in snacks | filter:snackFilter" ng-class="{row: (($index+1)%2)===0}">
+        <div class="col-xs-6" ng-class="{fadeInRight: equal===true}" ng-if="path==='snacks'" ng-mouseover="show(snack)"  ng-mouseleave="unshow(snack)">
+          <div ng-class="{fadeIn: showSlide === true}" class="animated detail-list">
+            <img src="{{snack['prod']}}" ng-show="prodShow" class="width150" ng-class="{margtops: snack.Name === 'Progressigs'}"/>
             <div class="info-border" ng-show="showSlide">
             <div class="text-center">
               <img src="{{snack.manu}}" alt="" class="img-responsive center-image width60">
@@ -190,23 +215,9 @@
               <li class="detail" ng-if="snack.type1 != '' ">{{snack.type1}}</li>
               <li class="detail" ng-if="snack.type2 != '' ">{{snack.type2}}</li>
               <li class="detail" ng-if="snack.type3 != '' ">{{snack.type3}}</li>
-            </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="visible-xs" ng-repeat="snack in snacks | filter:snackFilter" ng-class="{row: (($index+1)%2)===0}">
-        <div class="col-xs-6 animated" ng-class="{fadeInRight: equal===true}" ng-if="path==='snacks'" ng-mouseover="show(snack)"  ng-mouseleave="unshow(snack)">
-          <div ng-class="{fadeIn: showSlide === true}" class="animated detail-list">
-            <img src="{{snack['prod']}}" ng-show="prodShow" class="width150" />
-            <div class="info-border" ng-show="showSlide">
-            <div class="text-center">
-              <img src="{{snack.manu}}" alt="" class="img-responsive center-image">
-            </div>
-            <ul class="detail-list">
-              <li class="detail" ng-if="snack.type1 != '' ">{{snack.type1}}</li>
-              <li class="detail" ng-if="snack.type2 != '' ">{{snack.type2}}</li>
-              <li class="detail" ng-if="snack.type3 != '' ">{{snack.type3}}</li>
+              <li class="detail" ng-if="snack.type4 != '' ">{{snack.type4}}</li>
+              <li class="detail" ng-if="snack.type5 != '' ">{{snack.type5}}</li>
+              <li class="detail" ng-if="snack.type6 != '' ">{{snack.type6}}</li>
             </ul>
             </div>
           </div>

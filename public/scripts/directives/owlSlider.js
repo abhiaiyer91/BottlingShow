@@ -11,7 +11,7 @@ window.app.directive('owl',function(){
 				],
 				items : 6, //10 items above 1000px browser width
 				itemsDesktop : [1000,6], //5 items between 1000px and 901px
-				itemsDesktopSmall : [900,2], // 3 items betweem 900px and 601px
+				itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px
 				itemsTablet: [600,1], //2 items between 600 and 0;
 			});
 		}

@@ -61,9 +61,9 @@ window.app.factory('historyService', function(){
       },
       {
         "dateBkg": "year2013",
-        "mobile": "http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/history%20mobile/2013_zps7a6138e9.png~original",
+        "mobile": "http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/history%20mobile/2013_mobile_zps925f1214.png~original",
         "date":"http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/2013_zps86e0e647.png~original",
-        "img":"http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/09_zpsa75e085e.jpg~original",
+        "img":"http://i1370.photobucket.com/albums/ag251/anthroisphoto/mahaskaprod/HISTORY/2013_zps59078924.png~original",
         "content":"In 2013, Branden Muhl, son of Brad Muhl, became President and CEO of the company, continuing the tradition initiated by Harry Morgan and Brad Muhl of consolidated ownership under a single leader. Branden is expounding upon Brad’s business development efforts including building an independently owned brand portfolio, engaging in territorial expansion, and branding Mahaska."
       },
       {

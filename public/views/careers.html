@@ -63,10 +63,10 @@
 				<div class="nav-area">
 
 					<div class="dropdown">
-						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+						<a class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
 							BY CITY
 							<span class="caret"></span>
-						</button>
+						</a>
 
 						<ul class="dropdown-menu">
 							<li ng-repeat="city in cities" ng-class="{'active' : selected===$index }"><a href="" ng-click="narrow(city, $index)">{{city}}</a></li>

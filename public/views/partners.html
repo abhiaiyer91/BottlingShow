@@ -13,7 +13,8 @@
 			Today, we continue to advance our proprietary brands while remaining steadfast in our commitment to franchisor partners. I dedicated my career to the preservation of the franchise system and the rights of independent franchisees globally, not only in the beverage, but in all industries. The franchise system and the entrepreneurial spirit of the independent franchisee is an expression of core capitalist values that are uniquely American.
 			As a result, we deeply value the relationships with our franchisor partners and continue our unwavering commitment to developing franchisor brands within our territories with the same vigor that we afford our proprietary brands."
 			</p>
-			<p>-Bradley Muhl, <br>Chairman of the Board</p>
+			<p class="lead hidden-xs">-Bradley Muhl, <br>Chairman of the Board</p>
+			<p class="lead visible-xs" style="font-size:14px;">-Bradley Muhl, <br>Chairman of the Board</p>
 		</div>
 		</div>
 	</div>
@@ -33,9 +34,15 @@
 					<p ng-if="partner.PhotobucketUrl===''"><a ng-if="partner.Name == 'Dayton Meats'" target="_blank"><br>{{partner.Name}}<br></a></p>
 				</div>
 
-				<a ng-if="partner.PartnerType==='Sponsored Athletes' || partner.PartnerType==='Media Partners'" target="_blank" href="{{partner.link}}">
+				<a ng-if="partner.PartnerType==='Sponsored Athletes' || partner.PartnerType==='Media Partners'" target="_blank">
 				<img src="{{partner.PhotobucketUrl}}" alt="" class="center-img">
 				<p>{{partner.Name}}</p>
+				<div ng-if="partner.PartnerType === 'Sponsored Athletes'" class="row">
+					<a ng-if="partner.link != ''" href="{{partner.link}}" target="_blank"><i class="fa fa-desktop fa-2x turq"></i></a>
+					<a ng-if="partner.fb != ''" href="{{partner.fb}}" target="_blank"><i class="fa fa-facebook fa-2x turq"></i></a>
+					<a ng-if="partner.twitter != ''" href="{{partner.twitter}}" target="_blank"><i class="fa fa-twitter fa-2x turq"></i></a>
+					<a ng-if="partner.insta != ''" href="{{partner.insta}}" target="_blank"><i class="fa fa-instagram fa-2x turq"></i></a>
+				</div>
 				</a>
 			</div>
 		</div>

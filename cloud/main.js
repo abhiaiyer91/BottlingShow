@@ -14,7 +14,7 @@ Parse.Cloud.beforeSave("Email", function(request, response) {
 		"Message:\n\n" + request.object.get("message");
 
 	Mailgun.sendEmail({
-			to: "abhi@anthro.is, ryan@anthro.is",
+			to: "jdenniston@mahaska.com, dluthi@mahaska.com",
 			from: request.object.get("email"),
 			subject: "Email For - " + request.object.get("reason"),
 			text: text
